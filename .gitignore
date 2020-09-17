@@ -132,6 +132,5 @@ Dockerfile-new
 .DS_store
 geckodriver
 test*
-telegram_bot.py
 kube_configs/local/
 *.sh
