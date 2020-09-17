@@ -7,8 +7,8 @@ Capturing screenshots with selenium and sending results to telegram
 
 ## Setup:
 - Build the docker image
-- Run with -port and set the env variables
-- Curl localhost:port to check results!
+- Run with -port and set the env variables 
+- Curl localhost:port and check your telegram chat for results!
 
 - If running in kubernetes, see cronjob deploy for example of using a cronjob worker to fire the jobs
 ```
@@ -16,6 +16,8 @@ docker build . -t smarty:v0.5
 docker run -p 8887:8888 -e TELEGRAM_BOT_TOKEN="your-token" -e TELEGRAM_CHAT_ID="your chat id" smarty:v0.5
 curl localhost:8887
 ```
+
+Note: TELEGRAM_CHAT_ID is your chat id with your configured telegram bot. You can get it for example by running the telegram poller and printing the chat id. See: [Telegram bot intro](https://github.com/python-telegram-bot/python-telegram-bot/wiki/Extensions-%E2%80%93-Your-first-Bot)
 
 ## Adding your own fetchers
 - Create your selenium fetchers, see google_fetcher.py for exanple
