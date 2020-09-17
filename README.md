@@ -21,7 +21,7 @@ Note: TELEGRAM_CHAT_ID is your chat id with your configured telegram bot. You ca
 See: telegram_bot.py script or [Telegram bot intro](https://github.com/python-telegram-bot/python-telegram-bot/wiki/Extensions-%E2%80%93-Your-first-Bot)
 
 ## Adding your own fetchers
-- Create your selenium fetchers, see google_fetcher.py for exanple
+- Create your selenium fetchers, see google_fetcher.py for example
 - Add use of that fetchers by modifying the dict at handler.py
 
 ## Other notes:
