@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smartybot
+spec:
+  selector:
+    matchLabels:
+      run: smartybot
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: smartybot
+    spec:
+      containers:
+      - name: smartybot
+        image: akcontainerregistery.azurecr.io/smartybot/smarty:v0.90
+        env:        
+        - name: COOKIE_SECRET
+          value: "### YOUR SECRET HERE ###"
+        - name: WEBSERVER_PORT
+          value: "8888"
+        - name: TELEGRAM_BOT_TOKEN
+          value: "### YOUR TOKEN HERE ###"
+        - name: TELEGRAM_CHAT_ID
+          value: "### YOUR CHAT ID HERE ###"
+        ports:
+        - containerPort: 8888

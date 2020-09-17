@@ -1,0 +1,3 @@
+selenium
+tornado
+python-telegram-bot
