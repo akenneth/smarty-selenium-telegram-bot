@@ -17,7 +17,8 @@ docker run -p 8887:8888 -e TELEGRAM_BOT_TOKEN="your-token" -e TELEGRAM_CHAT_ID="
 curl localhost:8887
 ```
 
-Note: TELEGRAM_CHAT_ID is your chat id with your configured telegram bot. You can get it for example by running the telegram poller and printing the chat id. See: telegram_bot.py script or [Telegram bot intro](https://github.com/python-telegram-bot/python-telegram-bot/wiki/Extensions-%E2%80%93-Your-first-Bot)
+Note: TELEGRAM_CHAT_ID is your chat id with your configured telegram bot. You can get it by running the telegram_bot script, starting a chat with your bot and sending '/start' to it. The chat id will be printed to console.
+See: telegram_bot.py script or [Telegram bot intro](https://github.com/python-telegram-bot/python-telegram-bot/wiki/Extensions-%E2%80%93-Your-first-Bot)
 
 ## Adding your own fetchers
 - Create your selenium fetchers, see google_fetcher.py for exanple
