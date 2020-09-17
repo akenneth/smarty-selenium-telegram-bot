@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: smartybot
-        image: akcontainerregistery.azurecr.io/smartybot/smarty:v0.90
+        image: <Your Continer Registery>/smartybot/smarty:v0.90
         env:        
         - name: COOKIE_SECRET
           value: "### YOUR SECRET HERE ###"
