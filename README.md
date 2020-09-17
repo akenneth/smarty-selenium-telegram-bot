@@ -13,7 +13,7 @@ Capturing screenshots with selenium and sending results to telegram
 - If running in kubernetes, see cronjob deploy for example of using a cronjob worker to fire the jobs
 ```
 docker build . -t smarty:v0.5 
-docker run -p 8887:9999 smarty:v0.5 -e TELEGRAM_BOT_TOKEN="your-token" -e TELEGRAM_CHAT_ID="your chat id"
+docker run -p 8887:8888 smarty:v0.5 -e TELEGRAM_BOT_TOKEN="your-token" -e TELEGRAM_CHAT_ID="your chat id"
 curl localhost:8887
 ```
 
