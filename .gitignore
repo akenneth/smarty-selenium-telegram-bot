@@ -134,3 +134,4 @@ geckodriver
 test*
 telegram_bot.py
 kube_configs/local/
+*.sh
