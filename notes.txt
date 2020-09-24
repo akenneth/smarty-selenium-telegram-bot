@@ -1,0 +1,4 @@
+kubectl run curl --image=radial/busyboxplus:curl -i --tty
+kubectl attach curl -c curl -i -t
+
+version=v0.95.2 && bash ./build-smarty-docker.sh $version && bash ./deploy-smarty-kube.sh $version

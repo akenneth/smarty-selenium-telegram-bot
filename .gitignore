@@ -129,6 +129,7 @@ dmypy.json
 .pyre/
 Dockerfile-new
 .idea/
+local/
 .DS_store
 geckodriver
 test*
