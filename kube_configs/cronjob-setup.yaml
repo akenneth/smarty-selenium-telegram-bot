@@ -14,5 +14,24 @@ spec:
             args:
             - /bin/sh
             - -c
-            - curl smartybot.default.svc.cluster.local:8888
+            - curl smartybot.default.svc.cluster.local:8888/run/daily
+          restartPolicy: OnFailure
+---  
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: fire-smarty-weekly
+spec:
+  schedule: "0 8 * * 5" 
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: radial/busyboxplus:curl
+            args:
+            - /bin/sh
+            - -c
+            - curl smartybot.default.svc.cluster.local:8888/run/weekly
           restartPolicy: OnFailure

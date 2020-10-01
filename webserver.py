@@ -10,7 +10,8 @@ import tornado.web
 from telegram.ext import Updater
 
 from fetchers.base_fetcher import BaseSeleniumFetcher
-from handlers.handler import HomeHandler
+
+from handlers.daily_handler import NotificationsHandler
 
 PORT = os.environ.get('WEBSERVER_PORT') or 8888
 COOKIE_SECRET = os.environ.get('COOKIE_SECRET') or 'secret'
@@ -24,7 +25,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
-            (r"/", HomeHandler),            
+            (r"/run/(.*)", NotificationsHandler),
         ]
         settings = dict(
             xsrf_cookies=True,

@@ -2,3 +2,4 @@ kubectl run curl --image=radial/busyboxplus:curl -i --tty
 kubectl attach curl -c curl -i -t
 
 version=v0.95.2 && bash ./build-smarty-docker.sh $version && bash ./deploy-smarty-kube.sh $version
+recent_pod=$(kubectl get pods | grep -o 'smartyb\S*' | tail -1) && kubectl logs -f $recent_pod 
